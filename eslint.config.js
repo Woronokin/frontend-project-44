@@ -1,30 +1,41 @@
-import globals from "globals";
+import globals from 'globals';
 
-import path from "path";
-import { fileURLToPath } from "url";
-import { FlatCompat } from "@eslint/eslintrc";
-import pluginJs from "@eslint/js";
+import path from 'path';
+import { fileURLToPath } from 'url';
+import { FlatCompat } from '@eslint/eslintrc';
+import pluginJs from '@eslint/js';
+import importPlugin from 'eslint-plugin-import';
 
 // mimic CommonJS variables -- not needed if using CommonJS
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const compat = new FlatCompat({
-  baseDirectory: __dirname, 
-  recommendedConfig: pluginJs.configs.recommended
+  baseDirectory: __dirname,
+  recommendedConfig: pluginJs.configs.recommended,
 });
 
 export default [
-  { 
+  {
     languageOptions: {
-      ...globals.node,
-      ...globals.jest,
+      globals: {
+        ...globals.node,
+        ...globals.jest,
+        es2021: true,
+        node: true,
+      },
+      parserOptions: {
+        // Eslint doesn't supply ecmaVersion in `parser.js` `context.parserOptions`
+        // This is required to avoid ecmaVersion < 2015 error or 'import' / 'export' error
+        ecmaVersion: 'latest',
+        sourceType: 'module',
+      },
     },
-    parserOptions: {
-      ecmaVersion: 'latest',
-      sourceType: 'module',
-    }, 
+    plugins: { import: importPlugin },
+    rules: {
+      ...importPlugin.configs.recommended.rules,
+    },
   },
-  ...compat.extends("airbnb-base"),
+  ...compat.extends('airbnb-base'),
   {
     rules: {
       'no-underscore-dangle': [
