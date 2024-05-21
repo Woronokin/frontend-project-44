@@ -21,7 +21,7 @@ const getGame = () => {
   const numberTwo = getRandomNumber();
   const operation = operators[getRandomNumber(0, operators.length)];
   const question = `${numberOne} ${operation} ${numberTwo}`;
-  const correctAnswer = getQuestion(numberOne, numberTwo, operation);
+  const correctAnswer = getQuestion(numberOne, numberTwo, operation).toString();
   return { question, correctAnswer };
 };
 

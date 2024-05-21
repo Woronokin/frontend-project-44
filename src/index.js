@@ -3,7 +3,7 @@ import cli from '../src/cli.js';
 
 const roundCount = 3;
 
-export const playGame = (rule, getGame) => {
+const playGame = (rule, getGame) => {
     const userName = cli();
     console.log(rule);
     for (let i = 0; i < roundCount; i += 1) {
@@ -19,3 +19,5 @@ export const playGame = (rule, getGame) => {
     }
     console.log(`Congratulations, ${userName}!`);
 };
+
+export default playGame;
