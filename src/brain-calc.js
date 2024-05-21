@@ -2,8 +2,6 @@
 import cli from '../src/cli.js';
 import readlineSync from 'readline-sync';
 
-const isEven = (num) => num % 2 === 0;
-
 const brainCalc = () => {
     const userName = cli();
     console.log('What is the result of the expression?');
@@ -19,7 +17,7 @@ const brainCalc = () => {
         const userAnswer = readlineSync.question('Your answer: ');
         const correctAnswer = numberOne + numberTwo;
 
-        if (userAnswer !== correctAnswer) {
+        if (userAnswer.trim() !== correctAnswer.toString()) {
             console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
             console.log(`Let's try again, ${userName}!`);
             return;
