@@ -5,3 +5,5 @@
 [![asciicast](https://asciinema.org/a/659665.svg)](https://asciinema.org/a/659665)
 #### Демонстрация игры brain-calc - "Калькулятор":
 [![asciicast](https://asciinema.org/a/a2fGzvRDpsCG45ycgqYGMD7vZ.svg)](https://asciinema.org/a/a2fGzvRDpsCG45ycgqYGMD7vZ)
+#### Демонстрация игры brain-gcd - "НОД":
+[![asciicast](https://asciinema.org/a/THpuofoLTpqFQMCarsrs4ddKl.svg)](https://asciinema.org/a/THpuofoLTpqFQMCarsrs4ddKl)
