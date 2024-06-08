@@ -7,3 +7,6 @@
 [![asciicast](https://asciinema.org/a/a2fGzvRDpsCG45ycgqYGMD7vZ.svg)](https://asciinema.org/a/a2fGzvRDpsCG45ycgqYGMD7vZ)
 #### Демонстрация игры brain-gcd - "НОД":
 [![asciicast](https://asciinema.org/a/THpuofoLTpqFQMCarsrs4ddKl.svg)](https://asciinema.org/a/THpuofoLTpqFQMCarsrs4ddKl)
+#### Демонстрация игры brain-gcd - "Арифметическая прогрессия":
+[![asciicast](https://asciinema.org/a/xFSsVMKJRPxpoU19Hc4WlgeNb.svg)](https://asciinema.org/a/xFSsVMKJRPxpoU19Hc4WlgeNb)
+>>>>>>> bb11de6 (step 8: create new brain-progression game and add asciinema)
