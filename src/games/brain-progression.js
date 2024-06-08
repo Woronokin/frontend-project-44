@@ -4,7 +4,7 @@ import getRandomNumber from '../random-number.js';
 const rule = 'What number is missing in the progression?s';
 
 const progressionLength = 10;
-const getAnswer = () => {
+const getGame = () => {
   const startNum = getRandomNumber(0, 100);
   const progressionDiff = getRandomNumber(1, 100);
   const hiddenElement = getRandomNumber(0, progressionLength);
@@ -19,7 +19,7 @@ const getAnswer = () => {
 };
 
 const brainProgression = () => {
-  playGame(rule, getAnswer);
+  playGame(rule, getGame);
 };
 
 export default brainProgression;
