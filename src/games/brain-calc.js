@@ -3,6 +3,10 @@ import getRandomNumber from '../utils.js';
 
 const rule = 'What is the result of the expression?';
 const operators = ['+', '-', '*'];
+
+const minNum = 1;
+const maxNum = 100;
+
 const getQuestion = (numberOne, numberTwo, operation) => {
   switch (operation) {
     case '+':
@@ -12,13 +16,13 @@ const getQuestion = (numberOne, numberTwo, operation) => {
     case '*':
       return numberOne * numberTwo;
     default:
-      throw new Error('No such operation');
+      throw new Error(`No such operation - '${operation}'`);
   }
 };
 
 const getGame = () => {
-  const numberOne = getRandomNumber();
-  const numberTwo = getRandomNumber();
+  const numberOne = getRandomNumber(minNum, maxNum);
+  const numberTwo = getRandomNumber(minNum, maxNum);
   const operation = operators[getRandomNumber(0, operators.length)];
   const question = `${numberOne} ${operation} ${numberTwo}`;
   const correctAnswer = getQuestion(numberOne, numberTwo, operation).toString();

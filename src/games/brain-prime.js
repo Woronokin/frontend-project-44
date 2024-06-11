@@ -15,8 +15,11 @@ const isPrime = (num) => {
 
 const rule = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
+const minNum = 1;
+const maxNum = 100;
+
 const getGame = () => {
-  const question = getRandomNumber();
+  const question = getRandomNumber(minNum, maxNum);
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return { question, correctAnswer };
 };
