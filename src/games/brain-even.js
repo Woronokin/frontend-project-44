@@ -1,5 +1,5 @@
 import playGame from '../index.js';
-import getRandomNumber from '../random-number.js';
+import getRandomNumber from '../utils.js';
 
 const isEven = (num) => num % 2 === 0;
 
@@ -11,8 +11,8 @@ const getGame = () => {
   return { question, correctAnswer };
 };
 
-const brainEven = () => {
+const playBrainEven = () => {
   playGame(rule, getGame);
 };
 
-export default brainEven;
+export default playBrainEven;

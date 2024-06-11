@@ -1,5 +1,5 @@
 import playGame from '../index.js';
-import getRandomNumber from '../random-number.js';
+import getRandomNumber from '../utils.js';
 
 const isPrime = (num) => {
   if (num <= 1) {
@@ -21,8 +21,8 @@ const getGame = () => {
   return { question, correctAnswer };
 };
 
-const brainPrime = () => {
+const playBrainPrime = () => {
   playGame(rule, getGame);
 };
 
-export default brainPrime;
+export default playBrainPrime;

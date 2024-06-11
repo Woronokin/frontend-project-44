@@ -1,5 +1,5 @@
 import playGame from '../index.js';
-import getRandomNumber from '../random-number.js';
+import getRandomNumber from '../utils.js';
 
 const rule = 'What number is missing in the progression?s';
 
@@ -18,8 +18,8 @@ const getGame = () => {
   return { question, correctAnswer };
 };
 
-const brainProgression = () => {
+const playBrainProgression = () => {
   playGame(rule, getGame);
 };
 
-export default brainProgression;
+export default playBrainProgression;
