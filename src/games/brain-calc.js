@@ -2,7 +2,7 @@ import playGame from '../index.js';
 import getRandomNumber from '../random-number.js';
 
 const rule = 'What is the result of the expression?';
-const operators = ['+', '-', '*'];  
+const operators = ['+', '-', '*'];
 const getQuestion = (numberOne, numberTwo, operation) => {
   switch (operation) {
     case '+':
@@ -12,7 +12,7 @@ const getQuestion = (numberOne, numberTwo, operation) => {
     case '*':
       return numberOne * numberTwo;
     default:
-      break;
+      throw new Error('No such operation');
   }
 };
 
@@ -27,6 +27,6 @@ const getGame = () => {
 
 const brainCalc = () => {
   playGame(rule, getGame);
-};    
+};
 
 export default brainCalc;

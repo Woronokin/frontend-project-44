@@ -19,7 +19,7 @@ const getGame = () => {
   const question = getRandomNumber();
   const correctAnswer = isPrime(question) ? 'yes' : 'no';
   return { question, correctAnswer };
-}
+};
 
 const brainPrime = () => {
   playGame(rule, getGame);
