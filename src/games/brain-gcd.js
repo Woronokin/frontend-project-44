@@ -7,9 +7,9 @@ const minNum = 1;
 const maxNum = 100;
 
 const gameGCD = (numberOne, numberTwo) => {
-  const minNum = numberOne > numberTwo ? numberTwo : numberOne;
+  const minValue = numberOne > numberTwo ? numberTwo : numberOne;
   let gcd = 1;
-  for (let i = 2; i <= minNum; i += 1) {
+  for (let i = 2; i <= minValue; i += 1) {
     if (numberOne % i === 0 && numberTwo % i === 0) {
       gcd = i;
     }
